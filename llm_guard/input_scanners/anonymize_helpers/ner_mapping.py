@@ -1,3 +1,32 @@
+DISTILBERT_BASE_NER_CONF = {
+    "PRESIDIO_SUPPORTED_ENTITIES": [
+        "LOCATION",
+        "PERSON",
+        "ORGANIZATION",
+    ],
+    "DEFAULT_MODEL_PATH": "dslim/distilbert-NER",
+    "ONNX_MODEL_PATH": "dslim/distilbert-NER",
+    "LABELS_TO_IGNORE": ["O", "CARDINAL"],
+    "DEFAULT_EXPLANATION": "Identified as {} by the dslim/bert-base-NER NER model",
+    "SUB_WORD_AGGREGATION": "simple",
+    "DATASET_TO_PRESIDIO_MAPPING": {
+        "MISC": "O",
+        "LOC": "LOCATION",
+        "ORG": "ORGANIZATION",
+        "PER": "PERSON",
+    },
+    "MODEL_TO_PRESIDIO_MAPPING": {
+        "MISC": "O",
+        "LOC": "LOCATION",
+        "ORG": "ORGANIZATION",
+        "PER": "PERSON",
+    },
+    "CHUNK_OVERLAP_SIZE": 40,
+    "CHUNK_SIZE": 600,
+    "ID_SCORE_MULTIPLIER": 0.4,
+    "ID_ENTITY_NAME": "ID",
+}
+
 BERT_BASE_NER_CONF = {
     "PRESIDIO_SUPPORTED_ENTITIES": [
         "LOCATION",
